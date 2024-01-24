@@ -1,0 +1,26 @@
+.webCam{
+    display: flex;
+}
+.webVideo{
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+}
+.webVideo video{
+    border: 5px solid gray;
+}
+.webVideo div{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.webPicture{
+    display: flex;
+    flex-direction: column;
+}
+.webPicture canvas{
+    border: 5px solid gray;
+}
+.webPicture button{
+    margin-top: 10px;
+}

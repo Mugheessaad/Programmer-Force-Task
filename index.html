@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <form action="/">
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" value="John" /><br />
+      <label for="lname">Last name:</label><br />
+      <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+      <input type="number" id="number" value="0" /><br /><br />
+      <input type="range" id="range" value="0" min="0" max="100" /><br />
+      <label >Date and Time</label>
+      <input
+        type="datetime-local"
+        id="birthdaytime"
+        name="birthdaytime"
+      /><br /><br />
+
+      <label >Time</label>
+      <input type="time" id="appt" name="appt" /><br /><br />
+      <label >Color Picker</label>
+      <input
+        type="color"
+        id="favcolor"
+        name="favcolor"
+        value="#ff0000"
+      /><br /><br />
+
+      <label >Search Bar</label>
+      <input type="serch" /><br /><br />
+
+      <label >Datalist</label>
+      <input type="text" list="mydata" … />
+      <datalist id="mydata">
+        <option label="Fr" value="France"> </option>
+        <option label="Pak" value="Pakistan"> </option>
+        <option label="UK" value="United Kingdom"> </option></datalist
+      ><br /><br />
+
+      <label >placeholder and Autofocus</label>
+      <input
+        type="text"
+        placeholder="placeholder and auto focus"
+        autofocus
+      /><br /><br />
+
+      <label >number</label>
+      <input type="number" … min="1" max="10" /><br /><br />
+
+      <label >Time</label>
+      <input type="time" … step="1800" /><br /><br />
+
+      <label >Range</label>
+      <input type="range" id="rangeexample" … /><br /><br />
+
+      <label for="file">File progress:</label>
+      <progress
+        onforminput="value=rangeexample.value"
+        for="rangeexample"
+      ></progress><br /><br />
+
+      <label for="file">File meter:</label>
+      <meter value="4" min="0" max="10" high="6" optimum="8"></meter
+      ><br /><br />
+
+      <label >Input Required</label>
+      <input
+        type="text"
+        placeholder="text is required in this input"
+        required
+      />
+      <input type="text" … pattern="[a-z]{3}[0-9]{3}" /><br /><br />
+      <input type="submit" value="Submit" />
+
+      <figure>
+        <label >Audio and Figcaption</label>
+        <figcaption>Listen to the Allah hoo:</figcaption>
+        <audio
+          controls
+          src="https://humariweb.com/naats/qwjq/ALLAHH~1-(hamariweb.com).mp3"
+          loop="true"
+        ></audio>
+      </figure>
+      <br /><br /><br />
+      <details>
+        <summary>Details</summary>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+        quae? </details
+      ><br /><br /><br />
+
+      <embed
+        type="video/webm"
+        src="/video/BB_d46e17ae-4fbd-49a5-a5cf-3e4008ab3f37_FPpreview.mp4"
+        width="250"
+        height="200"
+      />
+
+      <figure>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Anatomy_of_a_Sunset-2.jpg/800px-Anatomy_of_a_Sunset-2.jpg"
+          alt="beautifull"
+        />
+        <figcaption>A beautifull sunset</figcaption>
+      </figure>
+    </form>
+
+    <div class="webCam">
+      <div class="webVideo">
+        <video id="video" width="320" height="240" autoplay></video>
+        <div>
+          <button id="start-camera">Start Camera</button>
+          <button id="stop-camera">Stop Camera</button>
+        </div>
+      </div>
+      <div class="webPicture">
+        <canvas id="canvas" width="320" height="240"></canvas>
+        <button id="click-photo">Click Photo</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>© Mughees Saad</p>
+    </footer>
+  </body>
+  <script>
+    let camera_button = document.querySelector("#start-camera");
+    let camera_stopbutton = document.querySelector("#stop-camera");
+    let video = document.querySelector("#video");
+    let click_button = document.querySelector("#click-photo");
+    let canvas = document.querySelector("#canvas");
+
+    camera_button.addEventListener("click", async function () {
+      let stream = await navigator.mediaDevices.getUserMedia({
+        video: true,
+        audio: false,
+      });
+      video.srcObject = stream;
+
+      camera_stopbutton.addEventListener("click", async function () {
+        stream.getTracks().forEach(function (track) {
+          track.stop();
+        });
+      });
+    });
+
+    click_button.addEventListener("click", function () {
+      canvas
+        .getContext("2d")
+        .drawImage(video, 0, 0, canvas.width, canvas.height);
+      let image_data_url = canvas.toDataURL("image/jpeg");
+
+      // data url of the image
+      console.log(image_data_url);
+    });
+  </script>
+</html>
