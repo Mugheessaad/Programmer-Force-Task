@@ -1,0 +1,32 @@
+/* main{
+    padding: 0px;
+    margin: 0px;
+}
+
+#canvas{
+    background-color: aquamarine;
+    position: relative;
+    margin: 1rem auto;
+}
+.ball{
+    background-color: black;
+			position: absolute;
+			display: inline-block;
+			border-radius: 50%;
+} */
+
+
+body {
+    text-align: center;
+}
+#canvas {
+    position: relative;
+    background-color: #ccddcc;
+    margin: 1em auto;
+}
+.ball {
+    background-color: black;
+    position: absolute;
+    display: inline-block;
+    border-radius: 50%;
+}
