@@ -1,0 +1,131 @@
+.main{
+    display: flex;
+    justify-content: center;
+}
+.maindivbox{
+    width: 65%;
+    display: flex;
+    margin: 30px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.imageDiv{
+    width: 45%;
+}
+
+.authenticationBox{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.authenticationBoxMAIN{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.5px solid lightgray;
+    height: 50%;
+    width: 95%;
+
+}
+
+.instagramLogo{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+.input{
+    display: flex;
+    justify-content: center;
+    height: 8%;
+    width: 100%;
+}
+.inputEmail input{
+    border: 0.5px solid lightgray;
+    width: 75%;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+.inputPass{
+    padding-top: 5px;
+}
+.inputPass input{
+    border: 0.5px solid lightgray;
+    width: 75%;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+
+.buttonLogIn{
+    background-color: #4cb5f9;
+    width: 73%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8.5px;
+    color: white;
+}
+.inputbtn{
+    height: 7%;
+    padding-top: 15px;
+}
+.hrline{
+    width: 75%;
+    display: flex;
+}
+.hr{
+    width: 40%;
+    height: 1px;
+    border-width: 0;
+    color: gray;
+    background-color: gray;
+}
+.inputHrLine{
+    height: 5%;
+    padding-top: 25px;
+}
+
+.inputFacebook :nth-child(2){
+    display: flex;
+    align-items: center;
+    color: #385185ff;
+    margin-left: 5px;
+    font-size: small;
+}
+.inputFacebook{
+    height: 4%;
+  padding-top: 35px;
+}
+.inputforget{
+    height: 5%;
+    padding-top: 25px;
+    font-size: small;
+}
+.signUpAuth{
+    width: 95%;
+    border: 0.5px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.signUpAuth a{
+    text-decoration: none;
+    color: #4cb5f9ff;
+    padding-left: 5px;
+    font-size: 17px;
+ }
+.getTheApp{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+.getTheAppimg{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+    width: 90%;
+}
